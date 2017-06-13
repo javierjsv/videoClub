@@ -6,12 +6,7 @@ function departamentosService($resource,API) {
 	},{
 		update:{
 			method:'PUT'
-		},
-		getCiudades:{
-			url:API+'/api/departamentos/find',
-			method:'GET',
-			isArray:true
-		}
+		}		
 	})
 }
 

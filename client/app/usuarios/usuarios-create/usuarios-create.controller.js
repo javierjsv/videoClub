@@ -9,21 +9,22 @@ class UsuariosCreateComponent {
   }
 
   $onInit(){
+
   	this.departamentosService.query().$promise
   	.then(response => {
   		this.departamentos = response;
   	})
   	.catch(err => console.log(err));
+
   }
   getCiudad(){
-  	this.ciudadesService.getCiudades({idDepartamento:this.idDepartamento}).$promise
-  	.then(response =>{
-  		console.log("Ciudades",response);
-  		this.ciudades = response;
-  	})
-  	.catch(err =>{
-  		console.log(err);
-  	})
+  	console.log(this.idDepartamento);
+    this.ciudadesService.getCiudades({idDepartamento:this.idDepartamento}).$promise
+    .then(response => {
+      console.log("Ciudades",response);
+      this.ciudades = response;
+    })
+    .catch(err => console.error(err));
   }
 
   guardarUsuario(){

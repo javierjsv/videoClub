@@ -10,5 +10,10 @@ angular.module('videoClubApp')
       .state('usuarios-list', {
         url: '/usuarios-list',
         template: '<usuarios-list></usuarios-list>'
-      });
+      })
+      .state('usuarios-update', {
+        url: '/usuarios-update/:idUsuario',
+        template: '<usuarios-update></usuarios-update>'
+      })
+      ;
   });

@@ -16,7 +16,7 @@ function AuthService($auth,$state){
 		$auth.login(user)
 		.then(response => {
 			console.log("Login ok",response);
-			console.log(Auth.isAdmin());
+			
 			$state.go('main');
 		})
 		.catch(err =>{
@@ -36,7 +36,7 @@ function AuthService($auth,$state){
 	}
 	function isAdmin(){
 		if(Auth.isAuthenticated()){
-				console.log("ROLES",$auth.getPayload().roles);
+				
 				if($auth.getPayload().roles.indexOf("ADMIN") !== -1){
 					return true;
 				}else{

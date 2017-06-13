@@ -12,6 +12,7 @@ function ciudadesService($resource,API) {
 			method:'GET',
 			isArray:true
 		}
+		
 	})
 }
 

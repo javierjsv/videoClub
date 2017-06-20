@@ -15,5 +15,9 @@ angular.module('videoClubApp')
         url: '/usuarios-update/:idUsuario',
         template: '<usuarios-update></usuarios-update>'
       })
+      .state('perfil-usuario', {
+        url: '/perfil-usuario',
+        template: '<perfil-usuario></perfil-usuario>'
+      })
       ;
   });

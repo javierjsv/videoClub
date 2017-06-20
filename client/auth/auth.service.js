@@ -9,6 +9,8 @@ function AuthService($auth,$state){
 		login:login,
 		logout:logout,
 		isAdmin:isAdmin,
+		datosUsuario:datosUsuario,
+		idUsuario:idUsuario,
 		isAuthenticated:isAuthenticated
 	}
 
@@ -46,6 +48,20 @@ function AuthService($auth,$state){
 			return false;
 		}
 
+	}
+	function datosUsuario(){
+		if(Auth.isAuthenticated()){
+			return $auth.getPayload().user;
+		}else{
+			return false;
+		}
+	}
+	function idUsuario(){
+		if(Auth.isAuthenticated()){
+			return $auth.getPayload().sub;
+		}else{
+			return false;
+		}
 	}
 	function isAuthenticated(){
 		if($auth.isAuthenticated()){

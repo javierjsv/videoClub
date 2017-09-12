@@ -10,7 +10,7 @@ class PeliculasListComponent {
 
   }
   $onInit(){
-  	
+
   		this.peliculasService.query().$promise
   			.then(response => {
   				this.peliculas = response;
@@ -26,7 +26,7 @@ class PeliculasListComponent {
 			console.log(response);
 		})
 		.catch(err => console.log(err));
-	}	
+	}
 }
 angular.module('videoClubApp')
   .component('peliculasList', {
